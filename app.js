@@ -1,70 +1,73 @@
-let colores = ["Rojo", "Azul", "Verde"];
-colores.push("Amarillo")
-console.log(colores);
-colores.pop()
+// Crear el arreglo inicial
+let aprendices = ["Carlos", "Ana", "Luis", "Marta", "Diego"];
 
-colores.unshift("Negro")
-console.log(colores);
+// Agregar un nombre al final
+aprendices.push("Elena");
 
-colores.shift()
-console.log(colores);
+// Eliminar el primer nombre
+aprendices.shift();
 
-for (let i = 0; i < colores.length; i++) {
-  console.log(colores[i]);
+// Mostrar la cantidad total
+console.log("Lista actualizada:", aprendices);
+console.log("Cantidad total de aprendices:", aprendices.length);
+
+//2. Inventario de frutas
+let frutas = ["Manzana", "Pera", "Uva"];
+
+// Agregar al inicio
+frutas.unshift("Banano");
+
+// Retirar el último elemento
+frutas.pop();
+
+// Mostrar arreglo final
+console.log("Inventario final:", frutas);
+
+// Recorrer con for...of
+for (let fruta of frutas) {
+  console.log("Fruta disponible:", fruta);
 }
-/*
-**/
-let persona = {
 
-nombre: "Lucía",
-  edad: 21,
-    ciudad: "Cali"
-}; 
-console.log(colores[0]);
-console.log(persona.edad);
-console.log(persona["edad"]);
-console.log(persona.length)
-for (const propiedad in persona) {
-  console.log(propiedad);
-} 
-console.log(persona.ciudad);
-console.log(colores);
-/*
- */
-let animales = ["Leon", "perro", "gato", "conejo"]
-animales.pop()
-console.log(animales);
+//3. Notas de actividades
+let notas = [4.5, 3.8, 5.0, 2.5, 4.0, 3.2];
+let suma = 0;
 
-// Arreglo inicial
-let frutas = ["Manzana", "Pera", "Banano"];
-
-// Operaciones solicitadas
-frutas.push("Mango");    // Agrega al final
-frutas.pop();            // Elimina el último
-frutas.unshift("Uva");   // Agrega al inicio
-frutas.shift();         // Elimina el primero
-
-// Resultado final
-console.log("Cantidad de elementos actual:", frutas.length);
-console.log("Arreglo final:", frutas);
-
-let numeros = [2, 4, 6, 8, 10];
-
-// Recorrido utilizando for clásico
-console.log("Valores del arreglo:");
-for (let i = 0; i < numeros.length; i++) {
-  console.log(numeros[i]);
+// Recorrer el arreglo usando un ciclo for clásico
+for (let i = 0; i < notas.length; i++) {
+  // Sumamos el valor de la posición actual a nuestra variable suma
+  suma = suma + notas[i];
 }
-// Creación del objeto
-let libro = {
-  titulo: "Cien años de soledad",
-  autor: "Gabriel García Márquez",
-  año: 1967,
-  genero: "Realismo mágico"
+
+// Calculamos el promedio dividiendo el total por la cantidad de notas
+let promedio = suma / notas.length;
+
+// Mostramos el resultado tal cual lo entrega el sistema
+console.log("El promedio de las notas es:", promedio);
+
+//4. Características de un celular
+let celular = {
+  marca: "Xiaomi",
+  modelo: "Redmi A3x",
+  año: 2024,
+  estado: "Activo"
 };
 
-// Mostrar cada propiedad en consola
-console.log("Título:", libro.titulo);
-console.log("Autor:", libro.autor);
-console.log("Año:", libro.año);
-console.log("Género:", libro.genero);
+// Mostrar propiedades individualmente
+console.log("Marca:", celular.marca);
+console.log("Modelo:", celular.modelo);
+console.log("Año:", celular.año);
+console.log("Estado:", celular.estado);
+
+//5. Lista de tareas
+let tareas = [];
+
+// Agregar tres actividades
+tareas.push("Estudiar JavaScript");
+tareas.push("Subir evidencia a GitHub");
+tareas.push("Revisar material de apoyo");
+
+// Eliminar la última
+tareas.pop();
+
+// Mostrar resultado
+console.log("Tareas pendientes:", tareas);
